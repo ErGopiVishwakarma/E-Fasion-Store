@@ -192,6 +192,22 @@ height: 700px;
 background-image: url("https://www.yoox.com/images/yoox80/banners/6895_1_Genz_WM_Main.png?634485886869569819&impolicy=cropDefault&width=960&height=510");
 background-repeat: no-repeat;
 background-size: cover;
+animation: bgChange 10s step-start infinite;
+}
+@keyframes bgChange{
+    20%{
+        background-image: url("https://www.yoox.com/images/yoox80/banners/6833_3_8byYoox_Special_WM.png?634485886601286852#width=930&height=660");
+    }
+    40%{
+        background-image: url("https://www.yoox.com/images/yoox80/banners/6824_1_XmasGift_WM_Bottom.jpg?634485886601286852&impolicy=cropDefault&width=960&height=510");
+    }
+    60%{
+        background-image: url("https://www.yoox.com/images/yoox80/banners/6769_2_Xmas_TOP1.jpg?634485886601286852#width=890&height=648");
+    }
+    80%{
+        background-image: url("https://www.yoox.com/images/yoox80/banners/6821_2_Christmas_Main_K.jpg?634485886601286852&impolicy=cropDefault&width=960&height=510");
+    }
+
 }
 #home-div-child{
 position: relative;
