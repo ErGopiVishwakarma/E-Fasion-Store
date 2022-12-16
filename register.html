@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2c198b2311.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <!-- header part  -->
+    <div id="top">
+        <div>
+            <div id="top-child-left">
+            <a href="#">COUNTRY ▼</a>
+            <a href="#">CUSTOMER CARE</a>
+            </div>
+        </div>
+        <div id="top-chile-center">
+            <P>WANT TO RECIECE YOUR GIFT IN TIME ? |  DISCOVER MORE </WANT></P>
+        </div>
+        <div>
+            <div id="top-child-right">
+            <a href="register.html"><i class="fa-solid fa-pen"></i> REGISTER</a>
+            <a href="login.html"><i class="fa fa-unlock-keyhole"></i> LOGIN</a>
+            </div>
+        </div>
+    </div>
+    <div id="middle">
+        <div>
+            <div id="middle-child-left">
+                 <a href="#">WOMEN</a>
+                 <a href="#">MEN</a>
+                 <a href="#">KIDS</a>
+                 <a href="#">HOME DECOR+ART</a>
+            </div>
+        </div>
+        <div id="yoox">
+            <a href="index.html">YOOX</a>
+        </div>
+        <div>
+            <div id="middle-chile-right">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="#"><i class="fa fa-bag-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- header part end  -->
+    <div style="width: 100%; border: 4px dashed black;"></div>
+    <div id="main">
+        <div id="child-1">
+            <h3>MYOOX</h3>
+            <h4>REGISTRATION
+            </h4>
+            <p>Take advantage of a faster checkout and enjoy promotions for registered customers only</p>
+            <a href="#">Discover all the benefits</a>
+        </div>
+        <div id="child-2">
+            <form action="" id="form">
+                <h4>REGISTER WITH YOUR SOCIAL MEDIA ACCOUNT</h4>
+                <a href="#" id="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" id="google"><i class="fa-brands fa-google"></i></a>
+                <h4>OR WITH YOUR EMAIL</h4>
+                <input type="text" id="first-name" placeholder="First Name">
+                <input type="text" id="last-name" placeholder="Last Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <p>Personalize your shopping experience.</p>
+                <div id="gender">
+                    <div><input type="radio" name="gender">Femal</div>
+                    <div><input type="radio" name="gender">Male</div>
+                </div>
+                <p>If you are over 18 years old, celebrate your birthday with us: We have a surprise for you.</p>
+                <input type="text" id="dob" placeholder="Date Of Birth">
+                <span style="font-size: 13px;">CELL PHONE</span>
+                <input type="number" id="number" placeholder="Mobile Number">
+                <p>By entering your phone number, you agree to be contacted by SMS for marketing and promotional purposes.</p>
+                <div id="checkbox">
+                        <input type="checkbox">
+                        <p>I agree to the use of my personal data in order to be updated on new arrivals, informed about exclusive items and contacted as part of targeted marketing initiatives related to services offered by YOOX.
+                            By analyzing my personal data, order history and browsing habits, YOOX can improve my shopping experience with suggestions that correspond to my interests.
+                            For further information, please consult the Privacy Policy.</p>
+                </div>
+                <input type="submit" id="submit" value="Register">
+            </form>
+        </div>
+        <div style="width: 100%; border: 4px dashed black; margin-top: 15px;"></div>
+        <div id="footer-bottom">
+          
+            <p id="paragraph">POWERED BY YOOX NET-A-PORTER GROUP - COPYRIGHT © 2000-2022 YOOX NET-A-PORTER GROUP S.P.A. - ALL RIGHTS RESERVED - SIAE LICENCE # 401/I/526</p>
+            <div id="link">
+            <a href="#">LEGAL AREA</a>
+            <a href="#"> PRIVACY POLICY</a>
+            </div>
+    </div>
+</div>
+    </div>
+</body>
+
+<script>
+    let myForm=document.getElementById("form")
+    let formData=JSON.parse(localStorage.getItem("formdata"))||[]
+    myForm.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        let firstName=myForm.first-name.value
+        let lastName=myForm.last-name.value
+        let email=myForm.email.value
+        let password=myForm.password.value
+        let dob=myForm.dob.value
+        let number=myForm.number.value
+        let obj={firstName,lastName,email,password,dob,number}
+        formData.push(obj)
+        localStorage.setItem("formdata",JSON.stringify(formData))
+        console.log(formData)
+    })
+</script>
+</html>

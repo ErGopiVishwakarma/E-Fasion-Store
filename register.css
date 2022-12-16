@@ -1,0 +1,256 @@
+*{margin: 0; padding: 0;}
+/* header part  */
+#top{
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+position: fixed;
+z-index: 999;
+background-color: white;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+#top>div{
+width: 33%;
+display: flex;
+justify-content: center;
+padding: 10px 0px;
+}
+#top>div>a{
+padding-left: 100px;
+}
+#top>div>#top-child-left{
+width: 40%;
+margin: auto;
+display: flex;
+margin-left: 200px;
+justify-content: space-evenly;
+}
+#top>div>#top-child-left>a{
+color: rgb(30, 29, 29);
+
+font-weight:bolder;
+font-size: 11px;
+text-decoration: none;
+}
+#top>div>p{
+color: rgb(30, 29, 29);
+font-weight: bolder;
+font-size: 11px;
+}
+#top>div>#top-child-right{
+width: 40%;
+margin: auto;
+display: flex;
+margin-right: 200px;
+justify-content: space-evenly;
+}
+#top>div>#top-child-right>a{
+color: rgb(30, 29, 29);
+font-weight:bolder;
+font-size: 11px;
+text-decoration: none;
+}
+#top>div>#top-child-right>a:hover{
+text-decoration: underline;
+}
+#top>div>#top-child-left>a:hover{
+text-decoration: underline;
+}
+/* till here ///////////////////////////////////////////////// */
+/* from here middle section start  ///////////////////////////////////*/
+#middle{
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+padding-top: 50px;
+}
+#middle>div{
+width: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#middle>#yoox{
+    width: 20%;
+    font-size: 50px;   
+    background-color: #f3ec78;
+    background-image: linear-gradient(to bottom,rgb(116, 9, 116),blue,green,rgb(128, 128, 128),rgb(220, 8, 8),cyan,red,rgb(95, 5, 231));
+    background-size: 100%;
+     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+
+}
+#middle>#yoox>a{
+text-decoration: none;
+font-weight: bolder;
+color: black;  
+width: 80px;
+font-family: 'Pathway Gothic One', sans-serif;
+}
+#middle>div>#middle-child-left{
+width: 53%;
+display: flex;
+justify-content: space-between;
+margin-left: 155px;
+
+}
+#middle>div>#middle-child-left>a{
+color: rgb(30, 29, 29);
+font-weight: bolder;
+font-size: 13px;
+text-decoration: none;
+}
+#middle>div>#middle-child-left>a:hover{
+background-color: rgba(192, 192, 31, 0.974);
+}
+#middle>div>#middle-chile-right{
+width: 53%;
+display: flex;
+justify-content: space-evenly;
+margin-right: 75px;
+}
+#middle>div>#middle-chile-right>a{
+font-size: 25px;
+color: black;
+}
+/* till here */
+#main{
+    width: 100%;
+}
+#child-1{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(248, 242, 235);
+}
+#child-1>h3{
+    padding-top: 40px;
+}
+#child-1>h4{
+    padding-bottom: 10px;
+    color: rgb(176, 178, 181);
+}
+#child-1>a{
+    color: black;
+    padding-bottom: 50px;
+}
+#child-2{
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+}
+#form>input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+#form>input::placeholder{
+    font-size: 15px;
+    color: black;
+}
+#form>input:focus::placeholder{
+    color: transparent;
+}
+#form>input:focus{
+    outline: 0px;
+}
+#form>a{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#facebook{
+    background-color: rgb(10, 10, 81);
+    color: white;
+    font-size: 25px;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#google{
+    margin-bottom: 15px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#form>h4{
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(96, 99, 104);
+}
+#gender{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+#gender>div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+#gender>div>input{
+    margin-right: 20px;
+    font-size: 30px;
+}
+#form>p{
+    font-size: 13px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgb(246, 244, 240);
+}
+#form>#submit{
+    background-color: rgb(0, 0, 5);
+    color: white;
+    font-size: 15px;
+}
+#checkbox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: rgb(246, 244, 240);
+}
+#checkbox>p{
+    font-size: 10px;
+    padding-left: 20px;
+    color: rgb(149, 152, 156);
+}
+/* bottom part  */
+#footer-bottom{
+width: 100%;
+background-color: rgb(61, 57, 57);
+
+}
+#footer-bottom>#paragraph{
+font-size: 13px;
+color: white;
+text-align: center;
+padding-top: 50px;
+}
+#footer-bottom>#link{
+text-align: center;
+padding-top: 10px;
+padding-bottom: 50px;
+}
+#footer-bottom>#link>a{
+color: rgb(137, 130, 130);
+font-size: 13px;
+text-decoration: none;
+margin-top: 10px;
+padding-right: 20px;
+}
