@@ -44,7 +44,7 @@
               <div id="middle-chile-right">
               <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
               <a href="#"><i class="fa-regular fa-heart"></i></a>
-              <a href="#"><i class="fa fa-bag-shopping"></i></a>
+              <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
               </div>
           </div>
       </div>
@@ -391,8 +391,20 @@ function domShow(data){
       let button=document.createElement("button")
       button.innerHTML="Add To Cart"
       button.addEventListener("click",(ele)=>{
+        let flag=false
+        for(let i=0; i<favourite.length; i++){
+            if(favourite[i].id==element.id){
+                flag=true
+                break;
+            }
+        }
+        if(flag==true){
+            alert("Item already added into your cart")
+        }
+        else{
         favourite.push(element)
         localStorage.setItem("favouriteData",JSON.stringify(favourite))
+        }
       })
       div.append(img,price,category,button)
       container.append(div)

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="cart.css">
+  <script src="https://kit.fontawesome.com/2c198b2311.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <!-- header part -->
+     <header id="header">
+      <div id="top">
+          <div>
+              <div id="top-child-left">
+              <a href="#">COUNTRY ▼</a>
+              <a href="#">CUSTOMER CARE</a>
+              </div>
+          </div>
+          <div id="top-chile-center">
+              <P>WANT TO RECIECE YOUR GIFT IN TIME ? |  DISCOVER MORE </WANT></P>
+          </div>
+          <div>
+              <div id="top-child-right">
+              <a href="register.html"><i class="fa-solid fa-pen"></i> REGISTER</a>
+              <a href="login.html"><i class="fa fa-unlock-keyhole"></i> LOGIN</a>
+              </div>
+          </div>
+      </div>
+      <div id="middle">
+          <div>
+              <div id="middle-child-left">
+                   <a href="women-item.html">WOMEN</a>
+                   <a href="men-item.html">MEN</a>
+                   <a href="#">KIDS</a>
+                   <a href="#">HOME DECOR+ART</a>
+              </div>
+          </div>
+          <div id="yoox">
+              <a href="index.html">YOOX</a>
+          </div>
+          <div>
+              <div id="middle-chile-right">
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              <a href="#"><i class="fa-regular fa-heart"></i></a>
+              <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- nav part  -->
+      <nav id="nav">
+          <div id="nav-item">
+              <a href="#"><p>ARRIVALS</p></a>
+              <a href="#">DESIGNERS</a>
+              <a href="#">CLOTHING</a>
+              <a href="#">SHOES</a>
+              <a href="#">ACCESSORIES & BAGS</a>
+              <a href="#">8 BY YOOX</a>
+              <a href="#">YOOXYGEN</a>
+              <a href="#">COLLARBORATIONS</a>
+              <a href="#">BEST DEALS</a>
+              <a id="gift" href="#">GIFT GUIDE</a>
+          </div>
+  
+      </nav>
+  </header>
+  <!-- header part end -->
+    <div id="container"></div>
+</body>
+
+<script>
+    let arrdata=JSON.parse(localStorage.getItem("favouriteData"))||[]
+    function domShow(data){
+    container.innerHTML=null
+    data.forEach((element,index) => {
+      let div=document.createElement("div")
+      let img=document.createElement("img")
+      img.setAttribute("src",element.image)
+      let price=document.createElement("p")
+      price.innerHTML="price -  $"+element.price
+      let category=document.createElement("h3")
+      category.innerHTML=element.category
+      let button=document.createElement("button")
+      button.innerHTML="Remove"
+      button.addEventListener("click",(ele)=>{
+        arrdata.splice(index,1)
+        localStorage.setItem("favouriteData",JSON.stringify(arrdata))
+        domShow(arrdata)
+      })
+      div.append(img,price,category,button)
+      container.append(div)
+
+    });
+  }
+  domShow(arrdata)
+</script>
+</html>
